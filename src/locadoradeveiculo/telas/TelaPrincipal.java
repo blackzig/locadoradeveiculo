@@ -5,6 +5,7 @@
  */
 package locadoradeveiculo.telas;
 
+import Util.TableCellRendererColor;
 import Util.ValidadorCPFECNPJ;
 import java.awt.HeadlessException;
 import java.sql.SQLException;
@@ -24,7 +25,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     public TelaPrincipal() {
         initComponents();
-
+        JTBUsuario.setDefaultRenderer(Object.class, new TableCellRendererColor());
     }
 
     /**
@@ -86,6 +87,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        JTBUsuario.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         JTBUsuario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
